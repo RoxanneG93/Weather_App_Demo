@@ -12,7 +12,7 @@
     "react-dom": "^16.5.1",
     "react-scripts": "1.1.5"
   },
-  "homepage": "https://github.com/RoxanneG93/Weather_App_Demo/tree/master/weather-app",
+  "homepage": "https://github.com/RoxanneG93/Weather_App_Demo/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
