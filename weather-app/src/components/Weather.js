@@ -1,4 +1,12 @@
 import React from 'react';
+// FONT-AWESOME IMPORTS
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
+
+// adding to Font-Awesome Library
+library.add(faExclamationCircle)
+
 
 // THIS IS A STATE-LESS FUNCTIONAL COMPONENTS
 const Weather = (props) => {
@@ -14,7 +22,7 @@ const Weather = (props) => {
           { 
             props.temperature &&  
             <p className="weather__key">
-              Temperature: <span className="weather__value">{ props.temperature }</span>
+              Temperature: <span className="weather__value">{ props.temperature } <span>&#176;</span></span>
             </p>
           }
           { 
@@ -29,7 +37,7 @@ const Weather = (props) => {
               Conditions: <span className="weather__value">{ props.description }</span>
             </p>
           }
-          { props.error && <p className="weather__error">{props.error} </p>}
+          { props.error && <p className="weather__error"><FontAwesomeIcon icon={faExclamationCircle} /> {props.error} </p>}
         </div>
   );
 }

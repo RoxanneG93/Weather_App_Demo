@@ -7,9 +7,10 @@ body {
 }
 
 .wrapper {
-  background: #FEAC5E;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #BE93C5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
   
   height: 100vh;
@@ -28,13 +29,14 @@ body {
 
 .title-container {
   height: 90vh;
-  /* background: url("img/bg.jpg") center center no-repeat; */
+  background: url("img/landscape.png") center center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #000;
+  padding: 35px;
 }
 
 .title-container__title {
@@ -62,7 +64,7 @@ body {
 input[type="text"] {
   background-color: transparent;
   border: 0;
-  border-bottom: solid 1px #f16051;
+  border-bottom: solid 1px #16efff;
   width: 30%;
   padding-bottom: 4px;
   color: #fff !important;
@@ -91,7 +93,7 @@ button {
   letter-spacing: 1px;
   font-size: 15px;
   cursor: pointer;
-  background-color: #f16051;
+  background-color: #ff910c;
   color: #fff;
   font-weight: 100;
 }
@@ -108,10 +110,11 @@ button:active {
 }
 
 .weather__key {
-  color: #f16051;
+  color: #ff910c;
   border-bottom: solid 2px rgba(255,255,255,0.06);
   padding: 20px 0 20px 0;
-  font-weight: 400;
+  /* font-weight: 400; */
+  font-size: 18px;
 }
 
 .weather__key:last-child {
@@ -120,7 +123,9 @@ button:active {
 
 .weather__value {
   color: #fff;
-  font-weight: 200;
+  /* font-weight: 200; */
+  font-size: 18px;
+  padding-left: 20px;
 }
 
 .weather__error {
@@ -128,4 +133,11 @@ button:active {
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: 200;
+}
+
+.degree {
+  height: 100px;
+  border: 1px solid red;
+  margin-bottom: 36px;
+  font-size: 10px;
 }

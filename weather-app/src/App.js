@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 // To view made compoents we have to make sure to import them
 import Titles from './components/Titles';
@@ -56,8 +55,6 @@ class App extends Component {
     const data = await api_call.json();
     // console.log(data.main.temp);
     // console.log( (9/5)*(data.main.temp - 273) + 32);
-    const farenheight = Math.round((9/5)*(data.main.temp - 273) + 32);
-    
     console.log(data);
 
     // EXAMPLE OF WHAT NOT TO DO - MANIPULATE STATE DIRECTLY
@@ -65,6 +62,7 @@ class App extends Component {
 
     // If statement so user can't submit black forms
     if(city && country ){
+        const farenheight = Math.round((9/5)*(data.main.temp - 273) + 32);
         // THE CORRECT WAY to Set State
         this.setState({
           temperature: farenheight,
@@ -97,10 +95,10 @@ class App extends Component {
        <div className="wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-xs-5 title-container">
+            <div className="col-xs-12 col-md-6 title-container">
               <Titles />
             </div>
-            <div className="col-xs-7 form-container">
+            <div className="col-xs-12 col-md-6 form-container">
               {/* Setting the prop in the Form component lets the Form.js have access to the func */}
               <Form getWeather={this.getWeather} />
               <Weather 
