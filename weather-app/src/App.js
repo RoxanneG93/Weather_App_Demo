@@ -80,7 +80,7 @@ class App extends Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
-        error: "Please Enter City & State"
+        error: "Please Enter City & Country"
       });
     }
   };
